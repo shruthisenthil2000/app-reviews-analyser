@@ -15,4 +15,4 @@ service-account*.json
 .idea/
 .vscode/
 node_modules
-node_modules/
+.next/
