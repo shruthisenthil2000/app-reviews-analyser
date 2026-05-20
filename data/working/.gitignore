@@ -1,0 +1,5 @@
+# Ignore generated working datasets; keep this README tracked.
+*
+!.gitignore
+!.gitkeep
+!README.md

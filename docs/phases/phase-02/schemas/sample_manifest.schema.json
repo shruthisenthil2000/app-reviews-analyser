@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://groww-pulse.local/schemas/sample_manifest.schema.json",
+  "title": "Stage 0 sample manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "product",
+    "source_csv",
+    "created_at",
+    "sampler_seed",
+    "global_max_reviews",
+    "text_max_chars",
+    "tier_caps",
+    "corpus_row_count",
+    "sampled_count",
+    "reviews"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "product": { "type": "string", "const": "com.nextbillion.groww" },
+    "source_csv": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "sampler_seed": { "type": "integer", "minimum": 0 },
+    "global_max_reviews": { "type": "integer", "minimum": 1, "maximum": 1000 },
+    "text_max_chars": { "type": "integer", "minimum": 80, "maximum": 2000 },
+    "tier_caps": {
+      "type": "object",
+      "required": ["negative", "neutral", "positive"],
+      "additionalProperties": false,
+      "properties": {
+        "negative": { "type": "integer", "minimum": 1 },
+        "neutral": { "type": "integer", "minimum": 1 },
+        "positive": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "corpus_row_count": { "type": "integer", "minimum": 0 },
+    "sampled_count": { "type": "integer", "minimum": 0, "maximum": 1000 },
+    "bucket_summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["iso_week", "tier", "pool_size", "selected_count"],
+        "properties": {
+          "iso_week": { "type": "string", "pattern": "^\\d{4}-W\\d{2}$" },
+          "tier": { "type": "string", "enum": ["negative", "neutral", "positive"] },
+          "pool_size": { "type": "integer", "minimum": 0 },
+          "selected_count": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "required": ["review_id", "rating", "date", "iso_week", "tier"],
+        "additionalProperties": false,
+        "properties": {
+          "review_id": { "type": "string", "minLength": 1 },
+          "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "date": { "type": "string", "format": "date" },
+          "iso_week": { "type": "string", "pattern": "^\\d{4}-W\\d{2}$" },
+          "tier": { "type": "string", "enum": ["negative", "neutral", "positive"] }
+        }
+      }
+    }
+  }
+}

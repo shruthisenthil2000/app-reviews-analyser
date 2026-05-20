@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "completed_at": "2026-05-20T01:21:41Z",
+  "week_label": "2026-W21",
+  "validation": {
+    "valid": true,
+    "stage_a_errors": [],
+    "stage_b_errors": [],
+    "theme_count": 5,
+    "pulse_word_count": 104,
+    "quote_count": 3,
+    "action_count": 3
+  },
+  "artifacts": {
+    "pulse_text": "artifacts/pulse_2026-W21.txt",
+    "mcp_delivery": "artifacts/mcp_delivery.json"
+  }
+}

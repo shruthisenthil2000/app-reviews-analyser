@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://groww-pulse.local/schemas/stage_a_output.schema.json",
+  "title": "Groq Stage A — theme discovery output",
+  "type": "object",
+  "required": ["themes"],
+  "additionalProperties": false,
+  "properties": {
+    "themes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["rank", "label", "summary", "evidence_review_ids"],
+        "additionalProperties": false,
+        "properties": {
+          "rank": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "label": { "type": "string", "minLength": 3, "maxLength": 120 },
+          "summary": { "type": "string", "minLength": 10, "maxLength": 600 },
+          "evidence_review_ids": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 25,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "notes": { "type": "string", "maxLength": 500 }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "completed_at": "2026-05-19T00:22:05Z",
+  "mcp_server": "https://saksham-mcp-server-production-f2a5.up.railway.app",
+  "dry_run": false,
+  "recipient_configured": true,
+  "doc_configured": true,
+  "ok": true,
+  "gmail": {
+    "status": "success",
+    "message": "Draft created",
+    "draft_id": "r-720734389649348580"
+  },
+  "docs": {
+    "status": "success",
+    "message": "Content appended to document",
+    "document_id": "15DJYFp_Pz-HFTn09s1KrdOl93W8uinIAfzwyXfwSRMw"
+  },
+  "errors": []
+}

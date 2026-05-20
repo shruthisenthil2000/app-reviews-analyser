@@ -1,0 +1,74 @@
+{
+  "themes": [
+    {
+      "rank": 1,
+      "label": "High brokerage charges",
+      "summary": "Multiple users have reported that the brokerage charges are very high, which is a major concern for them. Some users have even mentioned that the charges are higher than what they expected, making it a significant issue.",
+      "evidence_review_ids": [
+        "01a08e18-f322-4323-b81f-7a91eb9bd1f5",
+        "023058b2-b9e1-4a6a-b1ff-58326ff500cd",
+        "0de5f452-b1c8-4f58-99b4-6d7282627029",
+        "3279e703-f941-4a0f-81ad-7cc5549c90da",
+        "35c82bcd-c664-438b-9676-34fed7d829a8",
+        "58dc8d37-620a-4de4-ae8a-71782ef01816",
+        "5ac1d9e7-37a0-442b-ad63-55e7e5a676fb",
+        "61e5b584-f1fa-4caa-97a0-4a5dc4df079d",
+        "6c71451f-0f99-4635-bc53-e6dea1546ea1",
+        "6f4db7c9-4509-495b-9eb0-8bbd02e98931",
+        "9dcdf854-ac87-4f0f-9ae6-135c35ed8262",
+        "a690e1fe-e93c-4bea-83a4-b291c898d84c",
+        "ab26b1e7-b85a-4ed1-9b4e-74282bcf7c62",
+        "c88ab07a-5aab-41ee-ad92-9e740b6f6fad"
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Poor customer support",
+      "summary": "Some users have reported poor customer support, including unresponsive support agents and lack of help with resolving issues.",
+      "evidence_review_ids": [
+        "0d91d949-9eb0-4966-84a0-de2c91bb6105",
+        "1b0bb0d1-1a42-4823-bc3b-c8701877d23e",
+        "398c1fa8-127c-4633-8ed9-19be0d434aad",
+        "751038a6-b0b3-4d72-bb9b-77f105c43e50",
+        "828d1895-ded3-403f-b1eb-05e1e0caef10",
+        "99eff6d2-9454-4182-9f71-f373313508ba",
+        "aa37b47c-60d4-47b9-89e6-cfc053f45c6c",
+        "bda1c9c9-6f20-4cd8-aacd-64a327e7f159",
+        "d3803243-6892-44ec-b8de-6738699e22eb"
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "High brokerage fees",
+      "summary": "Multiple users have reported that the brokerage fees charged by Groww are very high, making it difficult for small investors to use the platform.",
+      "evidence_review_ids": [
+        "13100446-f1ae-4e02-9e8f-4ecb316ab71b",
+        "bbeea877-0e56-4897-aabc-743f4b90ac2b",
+        "d3d28747-57b2-4c6b-a1ee-de9b76c9a39a",
+        "d3e1cc49-b242-4090-b191-023a9401ad2b"
+      ]
+    },
+    {
+      "rank": 4,
+      "label": "Withdrawal and selling issues",
+      "summary": "Some users have reported issues with withdrawing money and selling stocks, including errors, delays, and unexpected charges. These issues have caused frustration and disappointment among users.",
+      "evidence_review_ids": [
+        "d47fd018-66bd-4084-92f7-53f856f301b9",
+        "dc9ceb97-c7a8-4490-b2c0-d82d017e4ab2",
+        "ec7cfb96-d348-4787-9092-8ecbc2e85c95",
+        "f28ecc4e-8468-4415-825f-0e3388797692"
+      ]
+    },
+    {
+      "rank": 5,
+      "label": "Technical issues and glitches",
+      "summary": "Several users have reported experiencing technical issues and glitches while using the app, including slow loading, login issues, and problems with order execution.",
+      "evidence_review_ids": [
+        "2bae08b4-74d2-4d81-81e0-e8cd00efe85b",
+        "5e5bdd73-f3cd-4fee-aef2-9664b3988142",
+        "722dcc70-ce36-45d7-b68a-197bb2ecca5d",
+        "bda1c9c9-6f20-4cd8-aacd-64a327e7f159"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+== Stage A: 27 chunk(s), 683 sampled reviews ==
+  Groq Stage A chunk 1/27 (26 reviews)...
+  Groq Stage A chunk 2/27 (25 reviews)...
+  Groq Stage A chunk 3/27 (23 reviews)...
+  Groq Stage A chunk 4/27 (28 reviews)...
+  Groq Stage A chunk 5/27 (25 reviews)...
+  Groq Stage A chunk 6/27 (27 reviews)...
+Traceback (most recent call last):
+  File "/Users/shruthisenthilkumar/Documents/App Reviews_LIP 4/scripts/pipeline/groq_client.py", line 63, in chat_json
+    with urllib.request.urlopen(req, timeout=120) as resp:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shruthisenthilkumar/Documents/App Reviews_LIP 4/scripts/run_weekly_pulse.py", line 389, in <module>
+    raise SystemExit(main())
+  File "/Users/shruthisenthilkumar/Documents/App Reviews_LIP 4/scripts/run_weekly_pulse.py", line 295, in main
+    result = call_stage_a_chunk(
+  File "/Users/shruthisenthilkumar/Documents/App Reviews_LIP 4/scripts/run_weekly_pulse.py", line 124, in call_stage_a_chunk
+    return chat_json(api_key=api_key, system=system, user=user)
+  File "/Users/shruthisenthilkumar/Documents/App Reviews_LIP 4/scripts/pipeline/groq_client.py", line 74, in chat_json
+    raise last_error from e
+RuntimeError: Groq API HTTP 429: {"error":{"message":"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kpzz1crhec7shz7te5j21tkh` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98042, Requested 7126. Please try again in 1h14m25.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+

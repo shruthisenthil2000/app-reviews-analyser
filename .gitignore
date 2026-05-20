@@ -1,0 +1,16 @@
+# Secrets and local config (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+client_secret*.json
+token.json
+credentials.json
+service-account*.json
+
+# OS
+.DS_Store
+
+# Optional: local editor
+.idea/
+.vscode/

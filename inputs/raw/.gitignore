@@ -1,0 +1,4 @@
+# Ignore all real exports in this directory. Track only .gitignore + .gitkeep.
+*
+!.gitignore
+!.gitkeep

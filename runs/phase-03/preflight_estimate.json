@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "sampled_reviews": 683,
+  "truncated_review_tokens_est": 22139,
+  "stats_block_tokens_est": 1161,
+  "input_token_target_per_request": 9000,
+  "estimated_stage_a_chunks": 4,
+  "estimated_stage_a_tokens": 36000,
+  "estimated_stage_b_tokens": 15000,
+  "retry_headroom": 5000,
+  "planned_daily_tokens": 56000,
+  "tpd_limit": 100000,
+  "within_tpd": true,
+  "pacing_seconds_between_requests": 60,
+  "groq_model": "llama-3.3-70b-versatile"
+}
