@@ -22,7 +22,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { downloadWeeklyPulse, exportPulsePdf } from "@/lib/export-pulse";
 import { getFilteredKpis } from "@/lib/filter-data";
-import { deliveryStatus, kpis } from "@/lib/mock-data";
+import {
+  buildEmailBody,
+  DELIVERY_EMAIL,
+  DELIVERY_SUBJECT,
+  deliveryStatus,
+  kpis,
+} from "@/lib/mock-data";
 import type {
   DeliveryState,
   NavId,
@@ -106,7 +112,43 @@ export default function Home() {
   const handleToggleTheme = useCallback((title: string) => {
     setExpandedTheme((prev) => (prev === title ? null : title));
   }, []);
-
+  
+  const handleDraftEmail = useCallback(async () => {
+    if (gmailStatus === "pending") return;
+  
+    setGmailStatus("pending");
+  
+    try {
+      const response = await fetch("/api/create-gmail-draft", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: DELIVERY_EMAIL,
+          subject: DELIVERY_SUBJECT,
+          body: buildEmailBody(),
+        }),
+      });
+  
+      const result = await response.json();
+  
+      if (!response.ok || !result.success) {
+        throw new Error(result.error ?? "Draft creation failed.");
+      }
+  
+      setGmailStatus("success");
+      addToast("Gmail draft created", "Saved to Gmail Drafts");
+    } catch (error) {
+      console.error("Draft creation failed:", error);
+      setGmailStatus("idle");
+      addToast(
+        "Gmail draft failed",
+        error instanceof Error ? error.message : "Unable to create Gmail draft"
+      );
+    }
+  }, [gmailStatus, addToast]);
+  
   const filteredKpis = getFilteredKpis(platform, timeRange);
   const selectedKpiData = filteredKpis.find((k) => k.label === selectedKpi)
     ?? kpis.find((k) => k.label === selectedKpi);
@@ -245,11 +287,7 @@ export default function Home() {
             gmailStatus={gmailStatus}
             docsStatus={docsStatus}
             pdfStatus={pdfStatus}
-            onDraftEmail={() =>
-              simulateDelivery(setGmailStatus, () =>
-                addToast("Gmail draft created", "Saved to drafts (simulated)")
-              )
-            }
+            onDraftEmail={handleDraftEmail}
             onAppendDoc={() =>
               simulateDelivery(setDocsStatus, () =>
                 addToast("Appended to Google Doc", "Pulse section updated (simulated)")

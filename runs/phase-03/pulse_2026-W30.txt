@@ -1,0 +1,13 @@
+Weekly App Review Pulse — Groww — 2026-W30
+
+This week, Play Store reviews highlight recurring friction across support, fees, and reliability. • High brokerage charges: Multiple users have reported that the brokerage charges are very high, which is a major concern for them. Some users have even mentioned that the charges are higher than what they expected, making it a significant issue. • Poor customer support: Some users have reported poor customer support, including unresponsive support agents and lack of help with resolving issues. • High brokerage fees: Multiple users have reported that the brokerage fees charged by Groww are very high, making it difficult for small investors to use the platform.
+
+User voices (paraphrased)
+1. "worst part of groww is they cut more charges than what they said vey very disappointed, it feels like a scam, i sell a stock and charges should be between 7 to 8 but they cut 30rs"
+2. "The worst investment experience ever, creating a Demat account took over a week and now my investment in processing since a week. tbh i did not expect such poor experience from an app which has suc…"
+3. "Happy to use but buying and selling charges are very high"
+
+Suggested actions
+1. Improve support SLAs and escalation paths — Grounded in theme: High brokerage charges.
+2. Review brokerage and fee transparency in-app — Grounded in theme: High brokerage charges.
+3. Stabilize withdrawals and order execution — Grounded in theme: High brokerage fees.

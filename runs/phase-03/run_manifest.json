@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "completed_at": "2026-05-20T01:21:41Z",
-  "week_label": "2026-W21",
+  "completed_at": "2026-07-22T12:44:57Z",
+  "week_label": "2026-W30",
   "validation": {
     "valid": true,
     "stage_a_errors": [],
@@ -12,7 +12,7 @@
     "action_count": 3
   },
   "artifacts": {
-    "pulse_text": "artifacts/pulse_2026-W21.txt",
+    "pulse_text": "artifacts/pulse_2026-W30.txt",
     "mcp_delivery": "artifacts/mcp_delivery.json"
   }
 }

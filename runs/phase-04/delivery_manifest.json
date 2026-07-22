@@ -1,20 +1,19 @@
 {
   "schema_version": "1.0",
-  "completed_at": "2026-05-19T00:22:05Z",
+  "completed_at": "2026-07-22T12:44:57Z",
   "mcp_server": "https://saksham-mcp-server-production-f2a5.up.railway.app",
   "dry_run": false,
   "recipient_configured": true,
   "doc_configured": true,
-  "ok": true,
+  "ok": false,
   "gmail": {
-    "status": "success",
-    "message": "Draft created",
-    "draft_id": "r-720734389649348580"
+    "status": "error",
+    "code": 404,
+    "message": "Application not found",
+    "request_id": "rrYhO0yjRkiMNvzYJH0Vcg"
   },
-  "docs": {
-    "status": "success",
-    "message": "Content appended to document",
-    "document_id": "15DJYFp_Pz-HFTn09s1KrdOl93W8uinIAfzwyXfwSRMw"
-  },
-  "errors": []
+  "docs": null,
+  "errors": [
+    "Application not found"
+  ]
 }
